@@ -31,16 +31,17 @@ if st.button("Generate Meal Plan"):
     st.write(f"BMI: {bmi}")
     st.write(f"Estimated Daily Calories: {calories}")
     st.write("Recommended: 3 small meals + 2-3 snacks daily")
-st.write("Focus on high-fiber carbohydrates and lean protein")
-st.write("Avoid skipping breakfast")
+    st.write("Focus on high-fiber carbohydrates and lean protein")
+    st.write("Avoid skipping breakfast")
 
     if fasting > 95:
         st.warning("Fasting glucose is above target. Please discuss with your healthcare provider.")
 
     if post_meal > 140:
         st.warning("Post-meal glucose is above target. Please discuss with your healthcare provider.")
-        if fasting <= 95 and post_meal <= 140:
-    st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
+
+    if fasting <= 95 and post_meal <= 140:
+        st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
 
     st.subheader("Meal Plan")
     st.write(f"Breakfast: {random.choice(VEG_BREAKFAST)}")
