@@ -43,22 +43,22 @@ if st.button("Generate Meal Plan"):
     if fasting <= 95 and post_meal <= 140:
         st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
 
-    st.subheader("Meal Plan")
+        st.subheader("Meal Plan")
+
     if diet == "Vegetarian":
-    breakfast = random.choice(VEG_BREAKFAST)
-    lunch = random.choice(VEG_LUNCH)
-    dinner = random.choice(VEG_DINNER)
-else:
-    breakfast = random.choice(NONVEG_BREAKFAST)
-    lunch = random.choice(NONVEG_LUNCH)
-    dinner = random.choice(NONVEG_DINNER)
+        breakfast = random.choice(VEG_BREAKFAST)
+        lunch = random.choice(VEG_LUNCH)
+        dinner = random.choice(VEG_DINNER)
+    else:
+        breakfast = random.choice(NONVEG_BREAKFAST)
+        lunch = random.choice(NONVEG_LUNCH)
+        dinner = random.choice(NONVEG_DINNER)
 
-st.write(f"Breakfast: {breakfast}")
-st.write(f"Morning Snack: {random.choice(SNACKS)}")
-st.write(f"Lunch: {lunch}")
-st.write(f"Evening Snack: {random.choice(SNACKS)}")
-st.write(f"Dinner: {dinner}")
-
+    st.write(f"Breakfast: {breakfast}")
+    st.write(f"Morning Snack: {random.choice(SNACKS)}")
+    st.write(f"Lunch: {lunch}")
+    st.write(f"Evening Snack: {random.choice(SNACKS)}")
+    st.write(f"Dinner: {dinner}")
     st.subheader("Foods To Limit")
     st.write("""
     - Sugary drinks
