@@ -50,12 +50,13 @@ if st.button("Generate Meal Plan"):
     if fasting <= 95 and post_meal <= 140:
         st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
 
-            st.subheader("7-Day Meal Plan")
+         st.subheader("7-Day Meal Plan")
 
-    days = [
+         days = [
         "Day 1", "Day 2", "Day 3", "Day 4",
         "Day 5", "Day 6", "Day 7"
     ]
+    
 
     if diet == "Vegetarian":
         breakfast_list = VEG_BREAKFAST
