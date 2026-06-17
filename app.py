@@ -47,6 +47,15 @@ if st.button("Generate Meal Plan"):
     st.write("Recommended: 3 small meals + 2-3 snacks daily")
     st.write("Focus on high-fiber carbohydrates and lean protein")
     st.write("Avoid skipping breakfast")
+    
+ if trimester == "First":
+        st.info("Focus on folate-rich foods, hydration, and managing nausea.")
+
+ elif trimester == "Second":
+        st.info("Increase protein and calcium intake to support baby's growth.")
+
+ else:
+        st.info("Prioritize protein, iron, and fiber. Smaller frequent meals may help with heartburn.")
 
 if fasting > 95:
     st.warning(
