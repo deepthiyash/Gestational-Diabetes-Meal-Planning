@@ -16,6 +16,23 @@ VEG_DINNER = [
     "Vegetable Soup + Chapati",
     "Mixed Vegetable Curry"
 ]
+NONVEG_BREAKFAST = [
+    "Boiled Eggs + Whole Wheat Toast",
+    "Greek Yogurt + Nuts",
+    "Egg Omelette + Vegetables"
+]
+
+NONVEG_LUNCH = [
+    "Grilled Chicken + Vegetables",
+    "Fish + Brown Rice + Salad",
+    "Chicken Curry + 2 Chapatis + Salad"
+]
+
+NONVEG_DINNER = [
+    "Chicken Soup + Chapati",
+    "Fish + Steamed Vegetables",
+    "Egg Bhurji + Salad"
+]
 
 SNACKS = [
     "Roasted Chana",
