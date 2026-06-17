@@ -102,5 +102,5 @@ st.write("""
 - Bakery items
 - Excess sweets
 """)
-```
+
 
