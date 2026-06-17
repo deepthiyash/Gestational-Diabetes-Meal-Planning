@@ -36,17 +36,17 @@ placeholder="Enter your email"
 )
 
 if st.button("Generate Meal Plan"):
-bmi = round(weight / ((height / 100) ** 2), 1)
-calories = int(weight * 30)
+    bmi = round(weight / ((height / 100) ** 2), 1)
+    calories = int(weight * 30)
 
-st.subheader("Assessment")
+    st.subheader("Assessment")
 
-st.write(f"BMI: {bmi}")
-st.write(f"Estimated Daily Calories: {calories}")
+    st.write(f"BMI: {bmi}")
+    st.write(f"Estimated Daily Calories: {calories}")
 
-st.write("Recommended: 3 small meals + 2-3 snacks daily")
-st.write("Focus on high-fiber carbohydrates and lean protein")
-st.write("Avoid skipping breakfast")
+    st.write("Recommended: 3 small meals + 2-3 snacks daily")
+    st.write("Focus on high-fiber carbohydrates and lean protein")
+    st.write("Avoid skipping breakfast")
 
 if fasting > 95:
     st.warning(
