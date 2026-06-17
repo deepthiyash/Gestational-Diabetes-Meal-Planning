@@ -44,11 +44,20 @@ if st.button("Generate Meal Plan"):
         st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
 
     st.subheader("Meal Plan")
-    st.write(f"Breakfast: {random.choice(VEG_BREAKFAST)}")
-    st.write(f"Morning Snack: {random.choice(SNACKS)}")
-    st.write(f"Lunch: {random.choice(VEG_LUNCH)}")
-    st.write(f"Evening Snack: {random.choice(SNACKS)}")
-    st.write(f"Dinner: {random.choice(VEG_DINNER)}")
+    if diet == "Vegetarian":
+    breakfast = random.choice(VEG_BREAKFAST)
+    lunch = random.choice(VEG_LUNCH)
+    dinner = random.choice(VEG_DINNER)
+else:
+    breakfast = random.choice(NONVEG_BREAKFAST)
+    lunch = random.choice(NONVEG_LUNCH)
+    dinner = random.choice(NONVEG_DINNER)
+
+st.write(f"Breakfast: {breakfast}")
+st.write(f"Morning Snack: {random.choice(SNACKS)}")
+st.write(f"Lunch: {lunch}")
+st.write(f"Evening Snack: {random.choice(SNACKS)}")
+st.write(f"Dinner: {dinner}")
 
     st.subheader("Foods To Limit")
     st.write("""
