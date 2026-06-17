@@ -8,6 +8,9 @@ st.set_page_config(
 )
 
 st.title("🥗 Gestational Diabetes Meal Planner")
+st.info(
+    "This tool is for educational purposes only and should not replace medical advice from your healthcare provider."
+)
 st.warning("Educational guidance only. Not medical advice.")
 
 age = st.number_input("Age", 18, 50, 30)
@@ -22,6 +25,10 @@ diet = st.selectbox(
 
 fasting = st.number_input("Fasting Blood Sugar", 50, 250, 90)
 post_meal = st.number_input("Post-meal Blood Sugar", 50, 350, 120)
+email = st.text_input(
+    "Email Address (optional)",
+    placeholder="Enter your email"
+)
 
 if st.button("Generate Meal Plan"):
     bmi = round(weight / ((height / 100) ** 2), 1)
