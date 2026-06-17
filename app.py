@@ -50,22 +50,31 @@ if st.button("Generate Meal Plan"):
     if fasting <= 95 and post_meal <= 140:
         st.success("Blood glucose values appear within commonly used gestational diabetes targets.")
 
-        st.subheader("Meal Plan")
+            st.subheader("7-Day Meal Plan")
+
+    days = [
+        "Day 1", "Day 2", "Day 3", "Day 4",
+        "Day 5", "Day 6", "Day 7"
+    ]
 
     if diet == "Vegetarian":
-        breakfast = random.choice(VEG_BREAKFAST)
-        lunch = random.choice(VEG_LUNCH)
-        dinner = random.choice(VEG_DINNER)
+        breakfast_list = VEG_BREAKFAST
+        lunch_list = VEG_LUNCH
+        dinner_list = VEG_DINNER
     else:
-        breakfast = random.choice(NONVEG_BREAKFAST)
-        lunch = random.choice(NONVEG_LUNCH)
-        dinner = random.choice(NONVEG_DINNER)
+        breakfast_list = NONVEG_BREAKFAST
+        lunch_list = NONVEG_LUNCH
+        dinner_list = NONVEG_DINNER
 
-    st.write(f"Breakfast: {breakfast}")
-    st.write(f"Morning Snack: {random.choice(SNACKS)}")
-    st.write(f"Lunch: {lunch}")
-    st.write(f"Evening Snack: {random.choice(SNACKS)}")
-    st.write(f"Dinner: {dinner}")
+    for day in days:
+        st.markdown(f"### {day}")
+        st.write(f"Breakfast: {random.choice(breakfast_list)}")
+        st.write(f"Morning Snack: {random.choice(SNACKS)}")
+        st.write(f"Lunch: {random.choice(lunch_list)}")
+        st.write(f"Evening Snack: {random.choice(SNACKS)}")
+        st.write(f"Dinner: {random.choice(dinner_list)}")
+        st.divider()
+        
     st.subheader("Foods To Limit")
     st.write("""
     - Sugary drinks
