@@ -35,9 +35,9 @@ email = st.text_input(
 placeholder="Enter your email"
 )
 
-if st.button("Generate Meal Plan"):
+if st.button("Generate Meal Plan")
 
-```
+
 bmi = round(weight / ((height / 100) ** 2), 1)
 calories = int(weight * 30)
 
