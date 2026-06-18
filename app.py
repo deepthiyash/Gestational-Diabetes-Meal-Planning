@@ -93,13 +93,19 @@ else:
     lunch_list = NONVEG_LUNCH
     dinner_list = NONVEG_DINNER
 
-for day in days:
+breakfasts = random.sample(breakfast_list, 7)
+lunches = random.sample(lunch_list, 7)
+dinners = random.sample(dinner_list, 7)
+morning_snacks = random.sample(SNACKS, 7)
+evening_snacks = random.sample(SNACKS, 7)
+
+for i, day in enumerate(days):
     st.markdown(f"### {day}")
-    st.write(f"Breakfast: {random.choice(breakfast_list)}")
-    st.write(f"Morning Snack: {random.choice(SNACKS)}")
-    st.write(f"Lunch: {random.choice(lunch_list)}")
-    st.write(f"Evening Snack: {random.choice(SNACKS)}")
-    st.write(f"Dinner: {random.choice(dinner_list)}")
+    st.write(f"Breakfast: {breakfasts[i]}")
+    st.write(f"Morning Snack: {morning_snacks[i]}")
+    st.write(f"Lunch: {lunches[i]}")
+    st.write(f"Evening Snack: {evening_snacks[i]}")
+    st.write(f"Dinner: {dinners[i]}")
     st.divider()
 
 st.subheader("Foods To Limit")
